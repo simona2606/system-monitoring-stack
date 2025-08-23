@@ -71,5 +71,8 @@ Once configured, you will obtain a Grafana dashboard showing system metrics such
 - Network throughput.
 - CPU and memory usage.
   
-<img width="1203" height="732" alt="Screenshot 2025-08-23 alle 18 44 49" src="https://github.com/user-attachments/assets/52b33103-ed9b-4ea4-a0bb-19a7a6225b95" />
+<img width="1190" height="724" alt="Screenshot 2025-08-23 alle 18 45 33" src="https://github.com/user-attachments/assets/facc0117-1b52-437d-93b3-5a5b7e2c0e2f" />
+
+<img width="1186" height="724" alt="Screenshot 2025-08-23 alle 18 46 11" src="https://github.com/user-attachments/assets/24554e9a-2048-4738-a264-4fa9ec86307b" />
+
 
