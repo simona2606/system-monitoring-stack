@@ -70,3 +70,6 @@ Once configured, you will obtain a Grafana dashboard showing system metrics such
 - Number of open sockets.
 - Network throughput.
 - CPU and memory usage.
+  
+<img width="1203" height="732" alt="Screenshot 2025-08-23 alle 18 44 49" src="https://github.com/user-attachments/assets/52b33103-ed9b-4ea4-a0bb-19a7a6225b95" />
+
