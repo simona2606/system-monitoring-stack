@@ -80,4 +80,26 @@ Once configured, you will obtain a Grafana dashboard showing system metrics such
 
 <img width="1186" height="724" alt="Screenshot 2025-08-23 alle 18 46 11" src="https://github.com/user-attachments/assets/24554e9a-2048-4738-a264-4fa9ec86307b" />
 
+## How it works
 
+This stack leverages the modular architecture of Netdata, Prometheus, and Grafana to provide a robust and extensible monitoring solution. Each component plays a specific role in the ecosystem and, combined together, they allow real-time data collection, historical storage, and visualization of system metrics.
+
+### Core Components 
+- **Netdata:** Lightweight monitoring agent that runs on the host system. It collects real-time metrics about CPU, memory, disk I/O, network, and system processes, and exposes them via an HTTP endpoint.
+- **Prometheus:** Time-series database that scrapes metrics from Netdata at regular intervals, stores them efficiently, and provides a powerful query language (PromQL) for analysis.
+- **Grafana:** Visualization and analytics platform that connects to Prometheus as a data source. It enables the creation of interactive dashboards to explore metrics, detect anomalies, and correlate events.
+
+### Networking & Orchestration
+- **Docker Compose:** Orchestrates the Prometheus and Grafana containers, exposing their services on ports 9090 and 3000 respectively.
+- **Netdata Endpoint:** Runs directly on the host and is made available on port 19999. Prometheus connects to this endpoint (/api/v1/allmetrics) to ingest data.
+
+## FAQ
+
+### Why do I need to install Netdata separately?  
+Because Netdata runs as an agent directly on the host system. Prometheus then scrapes its metrics endpoint. Installing Netdata separately ensures you get full access to system-level data (CPU, memory, sockets, processes) that would not be available from inside a container.
+
+### Can I use this stack on a remote server?  
+Yes. You can deploy Prometheus and Grafana on a VPS or cloud server. Just make sure that Netdata is installed on the target host, that its endpoint is reachable, and that firewall/DNS settings are properly configured.
+
+### Can I customize the dashboards?
+Absolutely. The provided `grafana-dashboard.json` is a starting point. You can import it and then add, edit, or duplicate panels to suit your specific monitoring needs.
