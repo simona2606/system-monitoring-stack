@@ -9,14 +9,19 @@ This setup allows you to collect, store, and visualize system metrics, with a pr
 Before starting, you need to install and configure Netdata on the host machine.
 
 1. Install Netdata:
+   
    ```bash
       sudo apt install netdata
    ```
+   
 2. Generate the default configuration (if not already present):
+   
    ```bash
       sudo /usr/sbin/netdata -W build-config
    ```
+   
 3. Edit the Netdata configuration file:
+   
    ```bash
       sudo vi /etc/netdata/netdata.conf
    ```
@@ -25,24 +30,31 @@ Before starting, you need to install and configure Netdata on the host machine.
       bind socket to IP = 0.0.0.0
    ```
    (or, more restrictively, `bind socket to IP = <IP_HOST>`).
-5. Start and enable the Netdata service:
+   
+4. Start and enable the Netdata service:
+   
    ```bash
       sudo systemctl start netdata
       sudo systemctl enable netdata
    ```
+   
 Netdata will now be accessible at: 👉 `http://<IP_HOST>:19999`.
 
 ## Getting Started
 
 1. Clone this repository:
+
    ```bash
       git clone https://github.com/<username>/system-monitoring-stack.git
       cd system-monitoring-stack/monitoring
    ```
+   
 2. Start the monitoring stack:
+
    ```bash
       docker compose up -d
    ```
+   
 3. Access the services:
    - Prometheus → `http://localhost:9090`.
    - Grafana → `http://localhost:3000`.
