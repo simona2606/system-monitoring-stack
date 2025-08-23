@@ -1,4 +1,9 @@
 # System Monitoring Stack
+![Category](https://img.shields.io/badge/Category-Monitoring-blue)  
+![Compatibility](https://img.shields.io/badge/Compatibility-Linux-orange)  
+![Technologies](https://img.shields.io/badge/Technologies-Docker%20%7C%20Prometheus%20%7C%20Grafana%20%7C%20Netdata-brightgreen)  
+![Features](https://img.shields.io/badge/Features-Real--time%20Metrics%20%7C%20Time--Series%20Storage%20%7C%20Custom%20Dashboards-green)  
+![Prerequisites](https://img.shields.io/badge/Requires-Netdata-yellow)  
 
 ## Description
 
