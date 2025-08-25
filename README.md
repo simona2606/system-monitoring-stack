@@ -54,18 +54,27 @@ Netdata will now be accessible at: 👉 `http://<IP_HOST>:19999`.
       cd system-monitoring-stack/monitoring
    ```
    
-2. Start the monitoring stack:
+2. In the file `prometheus/prometheus.yml`, update the Netdata scrape target with the IP address of the machine where Netdata is running. For example:
+
+   ```bash
+      - job_name: 'netdata'
+        metrics_path: /api/v1/allmetrics
+        params:
+           format: [prometheus]
+        honor_labels: true
+        static_configs:
+           - targets: ['<NETDATA_HOST_IP>:19999']
+   ```
+   
+3. Start the monitoring stack:
 
    ```bash
       docker compose up -d
    ```
    
-3. Access the services:
+4. Access the services:
    - Prometheus → `http://localhost:9090`.
    - Grafana → `http://localhost:3000`.
-4. Configure Grafana:
-   - Add Prometheus as a new data source: URL → `http://prometheus:9090`.
-   - Import the dashboard: `grafana-dashboard.json`.
 
 ## Example Dashboard
 
