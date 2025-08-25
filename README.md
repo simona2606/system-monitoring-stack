@@ -50,7 +50,7 @@ Netdata will now be accessible at: 👉 `http://<IP_HOST>:19999`.
 1. Clone this repository:
 
    ```bash
-      git clone https://github.com/<username>/system-monitoring-stack.git
+      git clone https://github.com/simona2606/system-monitoring-stack.git
       cd system-monitoring-stack/monitoring
    ```
    
